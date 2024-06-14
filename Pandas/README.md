@@ -1,83 +1,129 @@
 # Price Analysis and Prediction
 
-This project aims to analyze iPhone prices across different versions and predict future prices using linear regression. The dataset used for this analysis is stored in a CSV file (`iphone_price.csv`).
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Example Output](#example-output)
-- [Contributing](#contributing)
-- [License](#license)
-- [Credits](#credits)
-
 ## Overview
 
-This project reads a CSV file containing iPhone prices for various versions, performs basic data analysis, and uses a linear regression model to predict future prices. It includes data visualization to illustrate the price trend across different iPhone versions.
+This project performs price analysis and prediction using linear regression on product versions. The code reads a CSV file containing product prices and versions, performs basic data analysis, and predicts future prices using a linear regression model.
 
 ## Features
 
-- Reads and analyzes the iPhone price data from a CSV file.
-- Displays the first few rows of the dataset and provides basic statistics.
-- Checks for and handles missing values by filling them with 0.
-- Adds a new column for discounted prices.
-- Uses linear regression to predict future iPhone prices.
-- Plots the price trend across different iPhone versions.
+## Features
+
+✨ **Data Reading and Analysis**: Reads and analyzes data from a CSV file.
+
+📊 **Statistics Display**: Shows basic information and statistics about the data.
+
+🔍 **Missing Values Handling**: Checks and fills missing values.
+
+💰 **Discounted Prices Calculation**: Adds a new column with discounted prices.
+
+📈 **Price Prediction**: Predicts future prices using linear regression.
+
+📉 **Trend Plotting**: Plots the price trend for visualization.
+
+## Requirements
+
+- Python 3.x
+- pandas
+- matplotlib
+- scikit-learn
+- os (built-in)
 
 ## Installation
 
-1. Clone the repository:
+To get started, ensure you have Python installed on your system. Then, install the necessary packages:
+
+```sh
+pip install pandas matplotlib scikit-learn
+```
+
+## Usage
+1. Clone the Repository
    ```sh
-   git clone https://github.com/basharul2002/iphone-price-analysis.git
-   cd price-analysis
+   git clone https://github.com/basharul2002/price-analysis-prediction.git
+   cd price-analysis-prediction
 
-2. Install the required Python packages:
-  ````sh
-  pip install pandas matplotlib scikit-learn
-  ````
+2. Run the Script
 
-## Usae
-
-Place the  csv (Ex: iphone_price.csv) file in the same directory as the script.
-
-Run the script:
-```
-python price_analysis.py
+Execute the script by running the following command:
+```sh
+python price_analysis_prediction.py
 ```
 
+3. Follow the Prompts
+   - Input your product name.
+   - Enter the path to your CSV file.
+
+
+## CSV File Format
+Ensure your CSV file has the following format:
+
+| version |	price |
+|---------|-------|
+|    1	 |  500  |
+|    2	 |  550  |
+|    3	 |  600  |
+|   ...	 |  ...  |
 
 ## Example Output
-The script will output:
+   ```sh
+   Input your product name: iPhone
+   Enter your csv file path: path/to/your/file.csv
 
-- First 5 rows of the dataframe.
-- Basic information about the dataframe.
-- Basic statistics of the dataframe.
-- Missing values per column.
-- First 5 rows after handling missing values and adding a discounted price column.
-- Predicted prices for future iPhone versions (versions 15 to 30).
-- A plot showing the price trend across different iPhone versions.
-- Example of predicted prices output:
+   First 5 rows of the dataframe:
+      version  price
+   0        1    500
+   1        2    550
+   2        3    600
+   ...
 
+   Dataframe info:
+   <class 'pandas.core.frame.DataFrame'>
+   RangeIndex: ... entries, 0 to ...
+   Data columns (total 2 columns):
+    #   Column   Non-Null Count  Dtype
+   ---  ------   --------------  -----
+    0   version  ... non-null    int64
+    1   price    ... non-null    float64
+   ...
+
+   Basic statistics:
+            version  price
+   count   ...       ...
+   mean    ...       ...
+   std     ...       ...
+   min     ...       ...
+   25%     ...       ...
+   50%     ...       ...
+   75%     ...       ...
+   max     ...       ...
+
+   Missing values per column:
+   version    0
+   price      0
+
+   First 5 rows after modification:
+      version  price  Discounted_Price
+   0        1    500             450.0
+   1        2    550             495.0
+   2        3    600             540.0
+   ...
+
+   In Future predicted iphone price:
+   Version   Predicted Price
+      15        ...
+      16        ...
+      17        ...
+      ...
 ```
-In Future predicted iPhone price:
-Version   Predicted Price
-15        1599.67
-16        1699.45
-17        1799.23
-18        1899.01
-...
-```
+## Contributing
+Contributions are welcome! If you have any ideas or improvements, feel free to fork the repository and submit a pull request.
 
-Contributing
-Contributions to this project are welcome! If you have any suggestions, improvements, or bug fixes, please submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
-
-License
+## License
 This project is licensed under the MIT License.
 
-Credits
-Developed and maintained by Basharul-Alam-Mazu
+## Credits
+Developed and maintained by [Basharul-Alam-Mazu](www.github.com/basharul2002)
 
-
-
+Enjoy exploring and using this project to analyze and predict prices!
+```sh
+Feel free to adjust the content and formatting to better suit your needs.
