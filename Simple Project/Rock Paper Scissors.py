@@ -2,7 +2,7 @@ import random
 
 options = ["rock", "paper", "scissors"]
 
-userWin = computerWin = 0
+userWin = computerWin = draw = 0
 
 random_number = random.randint(0, 2)
 
@@ -28,12 +28,19 @@ while True:
         userWin =+ 1 
 
     
+    elif userInput == computerInput :
+        print("Draw!")
+        draw += 1
+    
+
+    
     else :
         print("Computer won!")
         computerWin += 1
 
 print(f"You won {userWin} times")
 print(f"Computer won {computerWin} times")
+print(f"Draw: {draw} times")
 
 
 
