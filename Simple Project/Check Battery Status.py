@@ -1,3 +1,7 @@
+# pip install psutil
+
+
+
 import psutil
 
 battery = psutil.sensors_battery()
@@ -12,7 +16,7 @@ if battery is not None:
         hours, minutes = divmod(minutes, 60)
         return "%d:%02d:%02d" % (hours, minutes, seconds)
     
-    print(f"Battery remaining time: ", convertTime(battery.seceleft))
+    print(f"Battery remaining time: {convertTime(battery.secsleft)}")
 
 else:
     print("No battery information available")
